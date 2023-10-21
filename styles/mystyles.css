@@ -1,0 +1,49 @@
+/*global*/
+
+
+
+/*header*/
+.mb-3 {
+    display: table;
+    text-align: center;
+    color: black;
+    width: 60%;
+    align-items: self-start;
+    box-sizing: border-box;
+    
+    
+  }
+  .form-control{
+    background-color: lightgrey;
+    
+
+  }
+ 
+  
+  /* Total width: 160px
+       Total height: 80px
+       Content box width: 160px - (2 * 20px) - (2 * 8px) = 104px
+       Content box height: 80px - (2 * 20px) - (2 * 8px) = 24px */
+  
+  /*
+    
+   
+  
+  .form-label {
+    padding-right: 10px;
+    
+  }
+  div.form-example {
+    display: table-row;
+  }
+  
+  label,
+  input {
+    display: table-cell;
+    margin-bottom: 10px;
+  }
+  /*body*/
+  
+  
+ 
+  
