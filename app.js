@@ -18,19 +18,23 @@ this.studentGrade103=grade103;
 
 
 //create the registration
-function register(){
+function register() {
     //get the inputs using jQuery
    
-   let inputEmail =$("#txtEmail").val();
-    let inputPassword=$("#txtPassword").val();
-    let inputFirstName =$("#txtFirstName").val();
-    let inputLastName =$("#txtLastName").val();
-    let inputAge =$("#txtAge").val();
-    let inputGrade101 =$("#txt101").val();
-    let inputGrade102 =$("#txt102").val();
-    let inputGrade103 =$("#txt103").val();
-    let newStudent = new Student (inputEmail,inputPassword,inputFirstName,inputLastName,inputAge,inputGrade101,inputGrade102,inputGrade103);
-    if (isValid(newStudent)){
+    let inputEmail = $("#txtEmail");
+    let inputPassword = $("#txtPassword");
+    let inputFirstName = $("#txtFirstName");
+    let inputLastName = $("#txtLastName");
+    let inputAge = $("#txtAge");
+    let inputGrade101 = $("#txt101");
+    let inputGrade102 = $("#txt102");
+    let inputGrade103 = $("#txt103");
+    
+    
+    let newStudent = new Student (inputEmail.val(),inputPassword.val(),inputFirstName.val(),inputLastName.val(),inputAge.val(),inputGrade101.val(),inputGrade102.val(),inputGrade103.val());
+   
+    if (isValid(inputEmail,inputPassword,inputFirstName,inputLastName,inputAge,inputGrade101,inputGrade102,inputGrade103)){
+      
         console.log("student is Valid");
    save(newStudent);
 
@@ -45,29 +49,49 @@ function register(){
 }
 
 //create validation
-function isValid(aStudent){
+function isValid(inputEmail, inputPassword, inputFirstName, inputLastName, inputAge, inputGrade101,inputGrade102, inputGrade103){
+   
     let validation= true;
-    if (aStudent.studentEmail===""){
+    
+    inputEmail.removeClass("error");
+    inputPassword.removeClass("error");
+    inputAge.removeClass("error");
+    inputFirstName.removeClass("error");
+    inputLastName.removeClass("error");
+    inputGrade101.removeClass("error");
+    inputGrade102.removeClass("error");
+    inputGrade103.removeClass("error");
+
+
+    if (inputEmail.val() ===""){
         validation = false;
+        inputEmail.addClass("error");
     }
-    if (aStudent.studentPassword===""){
+    if (inputPassword.val() ===""){
         validation = false;
+        inputPassword.addClass("error");
     }
-    if (aStudent.studentAge===""){
+    if (inputAge.val() ===""){
         validation = false;
+        inputAge.addClass("error");
     }
-    if (aStudent.studentFirstName===""){
+    if (inputFirstName.val() ===""){
         validation = false;
+        inputFirstName.addClass("error");
     }
-    if (aStudent.studentLastName===""){
+    if (inputLastName.val() ===""){
         validation = false;
+        inputLastName.addClass("error");
     }
-    if (aStudent.studentGrade101===""){
+    if (inputGrade101.val() ===""){
         validation = false;
-    }if (aStudent.studentGrade102===""){
+        inputGrade101.addClass("error");
+    }if (inputGrade102.val() ===""){
         validation = false;
-    }if (aStudent.studentGrade103===""){
+        inputGrade102.addClass("error");
+    }if (inputGrade103.val() ===""){
         validation = false;
+        inputGrade103.addClass("error");
     }
 return validation;
 }

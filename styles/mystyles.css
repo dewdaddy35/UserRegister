@@ -12,6 +12,7 @@ page
     box-sizing: border-box;
     font-size: 30vw; 
   }
+  
   .form-label{
     font-size: 10vh;
     color: blue;
@@ -51,6 +52,9 @@ page
   
   .box :first-child {
     align-self: center;
+  }
+  .error{
+    background-color: red;
   }
   
   /* Total width: 160px
