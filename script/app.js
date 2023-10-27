@@ -1,7 +1,3 @@
-// create the constructor
-//let student = {
- //   students:[]
-//}
 
 function Student  (email,password,firstName,lastName,age,grade101,grade102,grade103) {
 this.studentEmail=email;
@@ -45,7 +41,7 @@ function register() {
     }
     
 
-   // console.log(newStudent); 
+   //console.log(newStudent); 
 }
 
 //create validation
